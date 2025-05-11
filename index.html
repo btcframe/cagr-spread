@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin DCA vs Lump Sum CAGR Dashboard</title>
+    <meta name="title" content="Bitcoin DCA vs Lump Sum Comparison | CAGR Analysis Dashboard">
+    <meta name="keywords" content="bitcoin, BTC, dollar cost averaging, DCA, lump sum, CAGR, investment comparison, bitcoin investment strategy, cryptocurrency, bitcoin calculator, investment performance, bitcoin dashboard, investment analysis, bitcoin price history, investment returns">
+    <meta name="description" content="Compare Bitcoin Dollar Cost Averaging (DCA) vs Lump Sum investment strategies with this interactive dashboard. Analyze CAGR performance, view price history, and get strategy recommendations based on historical data.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+          <a href="https://btcframe.com" class="title">
+            <img src="https://btcframe.com/bitcoin.png" alt="Bitcoin Logo">
+            <span>DCA vs Lump Sum CAGR Spread</span>
+          </a>
+            <div class="controls">
+                <div class="control-item">
+                    <label>
+                        Investment Period
+                        <select id="period-select">
+                            <option value="1" selected>1 Year</option>
+                            <option value="2">2 Years</option>
+                            <option value="3">3 Years</option>
+                            <option value="4">4 Years</option>
+                            <option value="5">5 Years</option>
+                            <option value="6">6 Years</option>
+                            <option value="7">7 Years</option>
+                            <option value="8">8 Years</option>
+                            <option value="9">9 Years</option>
+                            <option value="10">10 Years</option>
+                            <option value="custom">Custom Date</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="control-item">
+                    <label>
+                        Total Investment ($)
+                        <input type="number" id="amount-input" value="10000" min="100" step="100">
+                    </label>
+                </div>
+                <div class="control-item">
+                    <label>
+                        DCA Frequency
+                        <select id="frequency-select">
+                            <option value="daily">Daily</option>
+                            <option value="weekly" selected>Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="custom-date-controls" class="control-item">
+                    <label>
+                        Start Date
+                        <input type="date" id="start-date-input">
+                    </label>
+                </div>
+                <div id="custom-date-controls-end" class="control-item">
+                    <label>
+                        End Date
+                        <input type="date" id="end-date-input">
+                    </label>
+                </div>
+                <div id="data-source" class="data-source"></div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="chart-container">
+                <div class="chart-card">
+                    <div class="chart-title">
+                        <span>BTC Price History</span>
+                        <span id="price-range"></span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="price-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-title">
+                        <span>DCA vs Lump Sum Performance</span>
+                        <span id="performance-range"></span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="performance-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stats-card">
+                    <div class="stats-title">Current BTC Price</div>
+                    <div class="stats-value" id="current-price">$0.00</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-title">DCA Strategy CAGR</div>
+                    <div class="stats-value" id="dca-cagr">0.00%</div>
+                    <div class="compare-value" id="dca-total">Final Value: $0.00</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-title">Lump Sum Strategy CAGR</div>
+                    <div class="stats-value" id="lump-cagr">0.00%</div>
+                    <div class="compare-value" id="lump-total">Final Value: $0.00</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-title">CAGR Spread (DCA - Lump Sum)</div>
+                    <div class="stats-value" id="cagr-spread">0.00%</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-title">Strategy Recommendation</div>
+                    <div class="compare-value" id="recommendation">Loading recommendation...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
