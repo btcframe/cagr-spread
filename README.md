@@ -1,8 +1,16 @@
 # Bitcoin DCA vs Lump Sum CAGR Dashboard
 
-This is a fully interactive web-based dashboard that compares two popular Bitcoin investment strategies:  
-**Dollar Cost Averaging (DCA)** vs **Lump Sum Investing**.  
-It analyzes each strategy using real historical Bitcoin price data and visualizes the **Compound Annual Growth Rate (CAGR)** spread between them.
+An interactive, client-side web dashboard built to compare the long-term performance of two fundamental Bitcoin investment strategies:  
+**Dollar Cost Averaging (DCA)** and **Lump Sum Investing**.
+
+The dashboard fetches real historical BTC price data and calculates the **Compound Annual Growth Rate (CAGR)** for each strategy over customizable timeframes.  
+It visualizes price movements, simulates investment outcomes based on user-defined parameters, and highlights the performance spread between DCA and Lump Sum — empowering users to better understand how timing and consistency affect Bitcoin returns.
+
+This tool is designed for investors, educators, and Bitcoin enthusiasts seeking data-driven insights into strategy performance across different market conditions.
+
+## 🖼️ Dashboard Preview
+
+<img width="1792" alt="bitcoin-cagr-spread" src="https://github.com/user-attachments/assets/6c95e8cf-eb6a-4a22-9395-fe122c584d49" />
 
 ## 🔍 Features
 
@@ -26,10 +34,6 @@ It analyzes each strategy using real historical Bitcoin price data and visualize
 - 🌐 **Responsive Design**  
   Optimized for desktop and mobile with a clean dark-themed UI.
 
-## 🖼️ Dashboard Preview
-
-<img width="1792" alt="bitcoin-cagr-spread" src="https://github.com/user-attachments/assets/6c95e8cf-eb6a-4a22-9395-fe122c584d49" />
-
 ## 🛠️ Tech Stack
 
 - **HTML/CSS**: Custom responsive layout and styling  
@@ -37,14 +41,16 @@ It analyzes each strategy using real historical Bitcoin price data and visualize
 - **Chart.js**: Interactive chart rendering  
 - **Mempool.space API**: Historical Bitcoin price data with fallback handling
 
-## 📂 Project Structure
+## 🚀 Future Enhancements
 
-/
-├── index.html # Main HTML file
-├── style.css # Styling for dashboard
-├── main.js # JavaScript logic and API handling
-├── bitcoin-cagr-spread.png # Dashboard screenshot
+* Export performance data as CSV
+* Add support for altcoin comparisons
+* Toggle fiat currency (USD, EUR, etc.)
+* Deeper backtest metrics like max drawdown, volatility, etc.
 
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss your ideas.
 
 ## ⚡ Getting Started
 
@@ -54,16 +60,3 @@ It analyzes each strategy using real historical Bitcoin price data and visualize
 git clone https://github.com/yourusername/cagr-spread.git
 cd cagr-spread
 
-2. Open index.html in your browser.
-
-⚠️ No server setup required – this is a fully client-side tool.
-
-## 🚀 Future Enhancements
-
-- Export performance data as CSV
-- Toggle fiat currency (USD, EUR, etc.)
-- Deeper backtest metrics like max drawdown, volatility, etc.
-
-## 🤝 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss your ideas.
