@@ -28,7 +28,7 @@ It analyzes each strategy using real historical Bitcoin price data and visualize
 
 ## 🖼️ Dashboard Preview
 
-![Bitcoin CAGR Dashboard](bitcoin-cagr-spread.png)
+<img width="1792" alt="bitcoin-cagr-spread" src="https://github.com/user-attachments/assets/6c95e8cf-eb6a-4a22-9395-fe122c584d49" />
 
 ## 🛠️ Tech Stack
 
